@@ -1,70 +1,89 @@
-** Work in progress
+**Note**: this is a work in progress (in case that's not completely obvious)!
 
-    [] - optional
+##Inspiration
+Many of the CLIs for various Ruby applications have a very intuitive interface, e.g. gem, knife, vagrant.  IMHO, the same cannot be said about git.  Don't get me wrong, there are a lot of very good things about git, but the interface is not one of them.
+
+For example (TODO: put some actual output in here):
+
+If you type 'vagrant', you get a list of high level commands.
+
+If you then type 'vagrant box', you get a list of subcommands.
+If you then type 'vagrant box add', you then get specific documentation for that command.
+
+It becomes very easy to guess/construct commands, without having to refer to the manpage or google.
+It is easy to remember commands because they are formed in a consistent and predictable manner.
+
+[] - optional parameter <br/>
+<> - required parameter <br/>
 
 gfh help [command]
 
-*setup repository
-init
-clone
+##setup repository
+init <br/>
+clone <br/>
 
-gfh repo init <name>
+gfh repo init <name> <br/>
 gfh repo clone <url> [branch/sha]     
 
 
-*interact with remote
-pull
-fetch
-push
-?describe/info/list
+##interact with remote
+pull <br/>
+fetch <br/>
+push <br/>
+?describe/info/list <br/>
 
-gfh remote pull         #pull fetches and merges
-gfh remote fetch <name> # fetch updates the local copy of the remote branch, doesn't merge
-gfh remote push <name>
-gfh remote list         # list all remotes
-
-
-*index/stage
-
-gfh index add <file(s)>         # bash expansion
-gfh index remove <file(s)>      # rm?  more inline with unix command line
-gfh index status [file(s)]
-gfh index move <from> <to>      # mv?
-gfh index commit [file(s)]
-gfh index reset [file(s)]       # index is reset
+gfh remote pull         #pull fetches and merges <br/>
+gfh remote fetch <name> # fetch updates the local copy of the remote branch, doesn't merge <br/>
+gfh remote push <name> <br/>
+gfh remote list         # list all remotes <br/>
+gfh remote info <name> <br/>
 
 
+##index/stage
 
-* branching
+gfh index add <file(s)>         # bash expansion <br/>
+gfh index remove <file(s)>      # rm?  more inline with unix command line <br/>
+gfh index status [file(s)] <br/>
+gfh index move <from> <to>      # mv? <br/>
+gfh index commit [file(s)] <br/>
+gfh index reset [file(s)]       # index is reset <br/>
 
-gfh branch create <name>
-gfh branch delete <name>
-gfh branch switch <name>
-gfh branch merge <name>
-gfh branch rebase <name>
 
 
-* working copy
-stash
-pop
-        - is stash/pop just short hand for branching? would it be better to go under that.
+##branching
+
+gfh branch create <name> <br/>
+gfh branch delete <name> <br/>
+gfh branch switch <name> <br/>
+gfh branch merge <name> <br/>
+gfh branch rebase <name> <br/>
+
+
+##working copy  
+** TODO: is this even a git term, or just svn? **
+
+stash <br/>
+pop <br/>
+
+** TODO: is stash/pop just short hand for branching? would it be better to go under that.**
 
 
 
         
-* status/interrogation
-show
-log
-diff
+##status/interrogation
+show <br/>
+log <br/>
+diff <br/>
 
 
-* sha related
-checkout 
-revert
+##sha related
+checkout  <br/>
+revert <br/>
 
 
 
-
+### General notes
+* what takes a single sha/file, what takes two, and what takes a range?
 
 
 # Unclassified git commands.
